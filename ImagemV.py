@@ -42,6 +42,30 @@ def show_image(self, index):
     try:
         image = Image.open(image_path)
         image = image.resize((300,300))
+        photo = ImageTk.PhotoImage(image)
+        self.image_label.config(image=photo)
+        self.image_label.image = photo
+    except Exception as e:
+        self.image_label.config(text=f"Erro ao abrir imagem: {str(e)}")
+
+        def show_previous_image(self):
+            if self.current_image_index > 0:
+                self.current_image_index -= 1
+                self.show_image(self.current_image_index)
+
+        def show_next_image(self):
+            if self.current_image_index < len(self.image_paths) -1:
+                self.current_image_index += 1
+                self.show_image(self.current_image_index)
+
+    if __name__ == "__main__":
+        root = tk.Tk()
+        app = ImageBrowserApp(root)
+        root.mainloop()
+
+     
+
+
 
      
 
