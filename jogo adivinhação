@@ -1,26 +1,26 @@
 import random
 
 def jogo_adivinhacao():
-    numero_aleatorio = random.randint(1,10)
-    max_tentativas = 8
-
+    numero_aleatorio = random.randint(1,10)#Criando um número aleatório
+    max_tentativas = 8 #Variavel de máxima de tentativas 
+   #Printa o terminal  (informar o player)
     print("Bem vindo ao jogo de adivinhação!")
     print("Tente adivinhar o número entre 1 e 10.")
 
     for tentativa in range(max_tentativas):
         palpite = int(input("Digite sua tentativa:"))
-
+    #Começando as comparações das variaveis
         if palpite < numero_aleatorio:
             print("Muito baixo. Tente um número maior.")
         elif palpite > numero_aleatorio:
             print("Muito alto. Tente um número menor.")
         else:
-            print(f"Parabéns! Você acertou o número (numero_aleatorio) em "
+            print(f"Parabéns! Você acertou o número "f"{numero_aleatorio} em "
                       f"{tentativa + 1} tentativas!")
-            return
+            return #Para reiniciar o código depois de terminar de executar 
             
     print(f"Suas {max_tentativas} tentativas acabaram."
-          f"O número correto era {numero_aleatorio}.")
+          f"O número correto era {numero_aleatorio}.") #Exibição das variaveis comparadas 
             
 if __name__ == "__main__":
     jogo_adivinhacao()
