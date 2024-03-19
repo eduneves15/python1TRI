@@ -19,3 +19,12 @@ def ler_dados():
                     print("Erro ao ler linha do arquivo:", linha)
     except FileNotFoundError:
         print("Nenhum dado cadastrado ainda.")
+
+
+def main():
+    while True:
+        print("\n===== Menu de Opções =====")
+        print("1. Cadastrar dados")
+        print("2. Ler dados cadastrados")
+
+        opcao = input("Escolha uma opção:")
