@@ -28,3 +28,16 @@ def main():
         print("2. Ler dados cadastrados")
 
         opcao = input("Escolha uma opção:")
+
+        if opcao == " ":
+            cadastrar_dados()
+        elif opcao == "2":
+            ler_dados()
+        elif opcao == "3":
+            print("Saindo. . .")
+            break
+        else:
+            print("Opção invalida. Por favor, escolha uma opção válida.")
+
+if __name__ == "__main__":
+    main()
