@@ -1,0 +1,8 @@
+sub1 = int(input("Insira o primeiro número:"))
+sub2 = int(input("Insira o segundo número:"))
+
+def subtracao ():
+     resultado = sub1 - sub2
+     print(f"O resultado é: {resultado}")
+
+subtracao()
